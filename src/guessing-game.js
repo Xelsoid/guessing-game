@@ -12,11 +12,6 @@ class GuessingGame {
     }
 
     guess() {
-    	
-    	var start=0;
-    	var end=0;
-    	
-
 		if((this.minRange==this.maxRange-1)
 			&&(this.quessNumber<this.minRange)){
 			return this.minRange;
@@ -28,19 +23,16 @@ class GuessingGame {
 		this.quessNumber=
 		Math.ceil((this.maxRange-this.minRange)/2+this.minRange);
 		return this.quessNumber;
-
-
-    	
     }
 
     lower() {
     	this.maxRange=this.quessNumber;
-return this;
+		return this;
     }
 
     greater() {
     	this.minRange=this.quessNumber;
-return this;
+		return this;
     }
 }
 
